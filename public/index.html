@@ -1,0 +1,80 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostalgia Recommendation</title>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<!-- ここにアプリのscriptタグを貼り付けます。 -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyB-yF6o6PpaXYiaJTl_sUpcYo9z04jrVgs",
+    authDomain: "nostalgia-recommendation.firebaseapp.com",
+    databaseURL: "https://nostalgia-recommendation-default-rtdb.firebaseio.com",
+    projectId: "nostalgia-recommendation",
+    storageBucket: "nostalgia-recommendation.appspot.com",
+    messagingSenderId: "124206531742",
+    appId: "1:124206531742:web:62a344f734401c25e8a78f",
+    measurementId: "G-0WTRVLXPLP"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+    <div>
+        <div>
+          <button id="leave_room" style="display: none;">退出</button>
+        </div>
+        <div id="rooms">
+            <input type="number" id="talk_id" required>
+            <input type="submit" id="submit_button">
+        </div>
+        <div id="name_buttons" style="display: none;">
+          <button class="tester" data-name="matsubara">松原</button>
+          <button class="tester" data-name="kase">加瀬</button>
+          <button class="tester" data-name="seki">関</button>
+          <button class="tester" data-name="ogino">荻野</button>
+          <button class="tester" data-name="sakamoto">坂元</button>
+          <button class="tester" data-name="maemoto">前本</button>
+          <button class="tester" data-name="ueda">植田</button>
+          <button class="tester" data-name="kobayashi">小林</button>
+        </div>
+        <div>
+          <button id="start" style="display: none;">スタート</button>
+        </div>
+        <div>
+          <p id="song_name" style="display: none;"></p>
+          <p id="sentence">会話IDを入力してください。</p>
+        </div>
+        <div>
+          <button id="partner_yes" style="display: none;" disabled>はい（相手）</button>
+          <button id="partner_no" style="display: none;" disabled>いいえ（相手）</button>
+          <button id="myself_yes" style="display: none;">はい（自分）</button>
+          <button id="myself_no" style="display: none;">いいえ（自分）</button>
+        </div>
+    </div>
+
+<script src="./index.js"></script>
+
+</body>
+</html>
