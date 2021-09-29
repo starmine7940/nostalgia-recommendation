@@ -17,6 +17,6 @@
 <br>
 
 # デモ
-<div align="center">
-    <img src="https://raw.github.com/wiki/starmine7940/nostalgia-recommendation/システム使用動画.gif" width=40%>
-</div>
+https://nostalgia-recommendation.web.app/
+
+※研究の実験用に作成したものです。一般の方が触っても面白くはありません。
